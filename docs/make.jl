@@ -1,7 +1,12 @@
 using MultivariateInterpolation
 using Documenter
 
-DocMeta.setdocmeta!(MultivariateInterpolation, :DocTestSetup, :(using MultivariateInterpolation); recursive=true)
+DocMeta.setdocmeta!(
+    MultivariateInterpolation,
+    :DocTestSetup,
+    :(using MultivariateInterpolation);
+    recursive=true,
+)
 
 makedocs(;
     modules=[MultivariateInterpolation],
@@ -14,12 +19,9 @@ makedocs(;
         edit_link="main",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages=["Home" => "index.md"],
 )
 
 deploydocs(;
-    repo="github.com/MultivariantToolkit/MultivariateInterpolation.jl",
-    devbranch="main",
+    repo="github.com/MultivariantToolkit/MultivariateInterpolation.jl", devbranch="main"
 )
