@@ -1,6 +1,5 @@
 module MultivariateInterpolation
 
-
 export MultiIndexSet
 
 using LinearAlgebra
