@@ -1,5 +1,9 @@
 module MultivariateInterpolation
 
-# Write your package code here.
 
+export MultiIndexSet
+
+using LinearAlgebra
+
+include("core/multi_index.jl")
 end
