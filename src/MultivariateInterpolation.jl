@@ -1,6 +1,7 @@
 module MultivariateInterpolation
 
-export MultiIndexSet
+export MultiIndexSet, spatial_dimension, polynomial_degree, lp_degree
+export contains_exponent
 
 using LinearAlgebra
 
