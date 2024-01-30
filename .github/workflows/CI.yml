@@ -20,6 +20,8 @@ jobs:
       matrix:
         version:
           - 'nightly'
+          - '1.6'
+          - '1.10'
         os:
           - ubuntu-latest
         arch:
