@@ -60,4 +60,11 @@ end
         nodes_fail = rand(RNG, deg)
         @test_throws ArgumentError Grid(nodes_fail, mi)
     end
+
+    @testset "delegations" begin
+        test_grid = Grid(mi)
+        @test spatial_dimension(test_grid) == dim
+        @test polynomial_degree(test_grid) == deg
+        @test lp_degree(test_grid) == lp
+    end
 end
