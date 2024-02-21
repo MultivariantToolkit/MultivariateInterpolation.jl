@@ -100,9 +100,12 @@ end
 
 TBW
 """
-function polynomial_degree(multi_index_set, lp)
+function polynomial_degree(multi_index_set::AbstractMatrix{T}, lp::Real) where {T<:Int}
     norms = norm.(eachcol(multi_index_set), lp)
-    return ceil(maximum(norms))
+    return Int(ceil(maximum(norms)))
+end
+function polynomial_degree(multi_index_set::MultiIndexSet)
+    return polynomial_degree(multi_index_set, lp_degree(multi_index_set))
 end
 
 """
